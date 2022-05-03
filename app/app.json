@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "Project",
-    "slug": "Project",
+    "name": "app",
+    "slug": "app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/img/icon.png",
+    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/img/splash.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#000"
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,12 +21,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/img/icon.png",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/img/icon.png"
+      "favicon": "./assets/favicon.png"
     }
   }
 }
