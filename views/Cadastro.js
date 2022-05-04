@@ -4,38 +4,46 @@ import { Button, Input, Text } from '@rneui/themed';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from '../assets/css/Css'
 
-export default function Login({navigation}){
+export default function Cadastro({navigation}){
 
   const [email, setEmail] = useState(null)
-  const [password, setPassword] = useState(null)
+  const [nome, setNome] = useState(null)
+  const [cpf, setCpf] = useState(null)
+  const [telefone, setTelefone] = useState(null)
 
-  const entrar = () =>{
-    navigation.reset({
-      index:0,
-      routes: [{name: "Dashboard"}]
-    })
+  const salvar = () => {
+      console.log("Salvou")
   }
-
-  const cadastrar = () => {
-    navigation.navigate("Cadastro")
-  }
-
+  
   return (
     <View style={[styles.container, specificStyle.specificContainer]}>
-      <Text h3>Nômade</Text>
+      <Text h3>Cadastre-se</Text>
       <Input
       placeholder="E-mail"
-      leftIcon={{ type: 'font-awesome', name: 'envelope' }}
       onChangeText={value => setEmail(value) }
       keyboardType="email-address"
       />
-      <Input
-      placeholder="Senha"
-      leftIcon={{ type: 'font-awesome', name: 'lock' }}
-      onChangeText={value => setPassword(value) }
-      secureTextEntry={true}
+
+<Input
+      placeholder="Nome"
+      onChangeText={value => setNome(value) }
       />
-     <Button 
+
+<Input
+      placeholder="CPF"
+      onChangeText={value => setCpf(value) }
+      keyboardType="number-pad"
+      returnKeyType="done"
+      />
+
+<Input
+      placeholder="Telefone"
+      onChangeText={value => setTelefone(value) }
+      keyboardType="phone-pad"
+      returnKeyType="done"
+      />
+
+        <Button 
         icon={
           <Icon
           name="check"
@@ -43,21 +51,9 @@ export default function Login({navigation}){
           color="white"
           />
         }
-        title=" Entrar"
+        title=" Salvar"
         buttonStyle={specificStyle.button}
-        onPress={() => entrar()}
-        />
-        <Button 
-        icon={
-          <Icon
-          name="user"
-          size={15}
-          color="white"
-          />
-        }
-        title=" Cadastrar"
-        buttonStyle={specificStyle.button}
-        onPress={() => cadastrar()}
+        onPress={() => salvar()}
         />            
       </View>
   );
