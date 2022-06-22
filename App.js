@@ -9,6 +9,8 @@ import Login from './views/Login';
 import Dashboard from './views/Dashboard';
 import Cadastro from './views/Cadastro';
 
+
+
 const Stack = createNativeStackNavigator();
 
 function Mystack() {

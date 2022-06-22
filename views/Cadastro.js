@@ -68,8 +68,3 @@ const specificStyle = StyleSheet.create({
     marginTop:10
   },
 })
-
-
-
-
-
